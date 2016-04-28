@@ -1,0 +1,43 @@
+Quartus Prime Archive log --	D:/UIC/465 Digital Logic Circuit/pro2/project2.qarlog
+
+Archive:	D:/UIC/465 Digital Logic Circuit/pro2/project2.qar
+Date:		Thu Apr 28 10:09:30 2016
+Quartus Prime		15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/UIC/465 Digital Logic Circuit/pro2/CLR_st.bdf
+D:/UIC/465 Digital Logic Circuit/pro2/RCA_16_LOW.bdf
+D:/UIC/465 Digital Logic Circuit/pro2/RCA_16_test.vwf
+D:/UIC/465 Digital Logic Circuit/pro2/RCA_16_test2.vwf
+D:/UIC/465 Digital Logic Circuit/pro2/WTF.vwf
+D:/UIC/465 Digital Logic Circuit/pro2/components.bdf
+D:/UIC/465 Digital Logic Circuit/pro2/ctl_reg_clear.smf
+D:/UIC/465 Digital Logic Circuit/pro2/ctl_reg_clk.smf
+D:/UIC/465 Digital Logic Circuit/pro2/ece_465_project2_test_vwf.vwf
+D:/UIC/465 Digital Logic Circuit/pro2/final_test.bdf
+D:/UIC/465 Digital Logic Circuit/pro2/ful_adder_1bit.bdf
+D:/UIC/465 Digital Logic Circuit/pro2/judge_fsm.smf
+D:/UIC/465 Digital Logic Circuit/pro2/judge_fsm.v
+D:/UIC/465 Digital Logic Circuit/pro2/judge_fsm.vwf
+D:/UIC/465 Digital Logic Circuit/pro2/project2.qpf
+D:/UIC/465 Digital Logic Circuit/pro2/project2.qsf
+D:/UIC/465 Digital Logic Circuit/pro2/register_16bit.bdf
+D:/UIC/465 Digital Logic Circuit/pro2/register_16bit.vwf
+D:/UIC/465 Digital Logic Circuit/pro2/test.bdf
+D:/UIC/465 Digital Logic Circuit/pro2/test2.bdf
+D:/UIC/465 Digital Logic Circuit/pro2/test_adder.bdf
+D:/UIC/465 Digital Logic Circuit/pro2/test_all.vwf
+D:/UIC/465 Digital Logic Circuit/pro2/test_all_1.vwf
+D:/UIC/465 Digital Logic Circuit/pro2/test_regi_add.vwf
+D:/UIC/465 Digital Logic Circuit/pro2/test_register_time.bdf
+d:/quartus/quartus/bin64/assignment_defaults.qdf
+	======= Total: 26 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Thu Apr 28 10:10:09 2016
+Source archive file:	D:/UIC/465 Digital Logic Circuit/pro2/project2.qar
+Archive was extracted into	D:/UIC/465 Digital Logic Circuit/pro2/project2_restored/
+		 - successfully.

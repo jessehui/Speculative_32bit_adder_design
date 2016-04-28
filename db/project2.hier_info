@@ -1,0 +1,697 @@
+|final_test
+Q0 <= register_16bit:inst14.Q0
+CLOCK => register_16bit:inst14.CK
+CLOCK => CLR_st:inst20.A
+CLOCK => judge_fsm:inst.clock
+CLOCK => register_16bit:inst15.CK
+CLOCK => inst13.CLK
+CLOCK => reg_clock.DATAIN
+A[0] => RCA_16_LOW:inst9.A0
+A[1] => RCA_16_LOW:inst9.A1
+A[2] => RCA_16_LOW:inst9.A2
+A[3] => RCA_16_LOW:inst9.A3
+A[4] => RCA_16_LOW:inst9.A4
+A[5] => RCA_16_LOW:inst9.A5
+A[6] => RCA_16_LOW:inst9.A6
+A[7] => RCA_16_LOW:inst9.A7
+A[8] => RCA_16_LOW:inst9.A8
+A[9] => RCA_16_LOW:inst9.A9
+A[10] => RCA_16_LOW:inst9.A10
+A[11] => RCA_16_LOW:inst9.A11
+A[12] => RCA_16_LOW:inst9.A12
+A[13] => RCA_16_LOW:inst9.A13
+A[14] => RCA_16_LOW:inst9.A14
+A[15] => RCA_16_LOW:inst9.A15
+A[16] => RCA_16_LOW:inst10.A0
+A[17] => RCA_16_LOW:inst10.A1
+A[18] => RCA_16_LOW:inst10.A2
+A[19] => RCA_16_LOW:inst10.A3
+A[20] => RCA_16_LOW:inst10.A4
+A[21] => RCA_16_LOW:inst10.A5
+A[22] => RCA_16_LOW:inst10.A6
+A[23] => RCA_16_LOW:inst10.A7
+A[24] => RCA_16_LOW:inst10.A8
+A[25] => RCA_16_LOW:inst10.A9
+A[26] => RCA_16_LOW:inst10.A10
+A[27] => RCA_16_LOW:inst10.A11
+A[28] => RCA_16_LOW:inst10.A12
+A[29] => RCA_16_LOW:inst10.A13
+A[30] => RCA_16_LOW:inst10.A14
+A[31] => RCA_16_LOW:inst10.A15
+B[0] => RCA_16_LOW:inst9.B0
+B[1] => RCA_16_LOW:inst9.B1
+B[2] => RCA_16_LOW:inst9.B2
+B[3] => RCA_16_LOW:inst9.B3
+B[4] => RCA_16_LOW:inst9.B4
+B[5] => RCA_16_LOW:inst9.B5
+B[6] => RCA_16_LOW:inst9.B6
+B[7] => RCA_16_LOW:inst9.B7
+B[8] => RCA_16_LOW:inst9.B8
+B[9] => RCA_16_LOW:inst9.B9
+B[10] => RCA_16_LOW:inst9.B10
+B[11] => RCA_16_LOW:inst9.B11
+B[12] => RCA_16_LOW:inst9.B12
+B[13] => RCA_16_LOW:inst9.B13
+B[14] => RCA_16_LOW:inst9.B14
+B[15] => RCA_16_LOW:inst9.B15
+B[16] => RCA_16_LOW:inst10.B0
+B[17] => RCA_16_LOW:inst10.B1
+B[18] => RCA_16_LOW:inst10.B2
+B[19] => RCA_16_LOW:inst10.B3
+B[20] => RCA_16_LOW:inst10.B4
+B[21] => RCA_16_LOW:inst10.B5
+B[22] => RCA_16_LOW:inst10.B6
+B[23] => RCA_16_LOW:inst10.B7
+B[24] => RCA_16_LOW:inst10.B8
+B[25] => RCA_16_LOW:inst10.B9
+B[26] => RCA_16_LOW:inst10.B10
+B[27] => RCA_16_LOW:inst10.B11
+B[28] => RCA_16_LOW:inst10.B12
+B[29] => RCA_16_LOW:inst10.B13
+B[30] => RCA_16_LOW:inst10.B14
+B[31] => RCA_16_LOW:inst10.B15
+RST_FSM => judge_fsm:inst.reset
+Q1 <= register_16bit:inst14.Q1
+Q2 <= register_16bit:inst14.Q2
+Q3 <= register_16bit:inst14.Q3
+Q4 <= register_16bit:inst14.Q4
+Q5 <= register_16bit:inst14.Q5
+Q6 <= register_16bit:inst14.Q6
+Q7 <= register_16bit:inst14.Q7
+Q8 <= register_16bit:inst14.Q8
+Q9 <= register_16bit:inst14.Q9
+Q10 <= register_16bit:inst14.Q10
+Q11 <= register_16bit:inst14.Q11
+Q12 <= register_16bit:inst14.Q12
+Q13 <= register_16bit:inst14.Q13
+Q14 <= register_16bit:inst14.Q14
+Q15 <= register_16bit:inst14.Q15
+Q16 <= register_16bit:inst15.Q0
+Q17 <= register_16bit:inst15.Q1
+Q18 <= register_16bit:inst15.Q2
+Q19 <= register_16bit:inst15.Q3
+Q20 <= register_16bit:inst15.Q4
+Q21 <= register_16bit:inst15.Q5
+Q22 <= register_16bit:inst15.Q6
+Q23 <= register_16bit:inst15.Q7
+Q24 <= register_16bit:inst15.Q8
+Q25 <= register_16bit:inst15.Q9
+Q26 <= register_16bit:inst15.Q10
+Q27 <= register_16bit:inst15.Q11
+Q28 <= register_16bit:inst15.Q12
+Q29 <= register_16bit:inst15.Q13
+Q30 <= register_16bit:inst15.Q14
+Q31 <= register_16bit:inst15.Q15
+Cout <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+test_fsm <= judge_fsm:inst.mi
+C_LOW <= RCA_16_LOW:inst9.CA
+fsm_input <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+reg_clock <= CLOCK.DB_MAX_OUTPUT_PORT_TYPE
+test_clr <= CLR_st:inst20.CLR
+CLR_OUT <= CLR_st:inst20.CLR
+
+
+|final_test|register_16bit:inst14
+Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CL => inst17.IN0
+CK => inst.CLK
+CK => inst2.CLK
+CK => inst3.CLK
+CK => inst4.CLK
+CK => inst5.CLK
+CK => inst6.CLK
+CK => inst7.CLK
+CK => inst8.CLK
+CK => inst9.CLK
+CK => inst10.CLK
+CK => inst11.CLK
+CK => inst12.CLK
+CK => inst13.CLK
+CK => inst14.CLK
+CK => inst15.CLK
+CK => inst16.CLK
+D0 => inst.DATAIN
+Q1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst2.DATAIN
+Q2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst3.DATAIN
+Q3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst4.DATAIN
+Q4 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D4 => inst5.DATAIN
+Q5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+D5 => inst6.DATAIN
+Q6 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+D6 => inst7.DATAIN
+Q7 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+D7 => inst8.DATAIN
+Q8 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D8 => inst9.DATAIN
+Q9 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+D9 => inst10.DATAIN
+Q10 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+D10 => inst11.DATAIN
+Q11 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+D11 => inst12.DATAIN
+Q12 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+D12 => inst13.DATAIN
+Q13 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+D13 => inst14.DATAIN
+Q14 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+D14 => inst15.DATAIN
+Q15 <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+D15 => inst16.DATAIN
+
+
+|final_test|CLR_st:inst20
+CLR <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+B => inst.IN1
+C => inst5.IN0
+D => inst.IN3
+
+
+|final_test|RCA_16_LOW:inst9
+S0 <= ful_adder_1bit:inst40.Si
+A0 => ful_adder_1bit:inst40.Ai
+B0 => ful_adder_1bit:inst40.Bi
+Ci => ful_adder_1bit:inst40.Ci
+S1 <= ful_adder_1bit:inst20.Si
+A1 => ful_adder_1bit:inst20.Ai
+B1 => ful_adder_1bit:inst20.Bi
+S2 <= ful_adder_1bit:inst21.Si
+A2 => ful_adder_1bit:inst21.Ai
+B2 => ful_adder_1bit:inst21.Bi
+S3 <= ful_adder_1bit:inst22.Si
+A3 => ful_adder_1bit:inst22.Ai
+B3 => ful_adder_1bit:inst22.Bi
+S4 <= ful_adder_1bit:inst23.Si
+A4 => ful_adder_1bit:inst23.Ai
+B4 => ful_adder_1bit:inst23.Bi
+S5 <= ful_adder_1bit:inst25.Si
+A5 => ful_adder_1bit:inst25.Ai
+B5 => ful_adder_1bit:inst25.Bi
+S6 <= ful_adder_1bit:inst26.Si
+A6 => ful_adder_1bit:inst26.Ai
+B6 => ful_adder_1bit:inst26.Bi
+S7 <= ful_adder_1bit:inst28.Si
+A7 => ful_adder_1bit:inst28.Ai
+B7 => ful_adder_1bit:inst28.Bi
+S8 <= ful_adder_1bit:inst29.Si
+A8 => ful_adder_1bit:inst29.Ai
+B8 => ful_adder_1bit:inst29.Bi
+S9 <= ful_adder_1bit:inst30.Si
+A9 => ful_adder_1bit:inst30.Ai
+B9 => ful_adder_1bit:inst30.Bi
+S10 <= ful_adder_1bit:inst31.Si
+A10 => ful_adder_1bit:inst31.Ai
+B10 => ful_adder_1bit:inst31.Bi
+S11 <= ful_adder_1bit:inst32.Si
+A11 => ful_adder_1bit:inst32.Ai
+B11 => ful_adder_1bit:inst32.Bi
+S12 <= ful_adder_1bit:inst33.Si
+A12 => ful_adder_1bit:inst33.Ai
+B12 => ful_adder_1bit:inst33.Bi
+S13 <= ful_adder_1bit:inst34.Si
+A13 => ful_adder_1bit:inst34.Ai
+B13 => ful_adder_1bit:inst34.Bi
+S14 <= ful_adder_1bit:inst35.Si
+A14 => ful_adder_1bit:inst35.Ai
+B14 => ful_adder_1bit:inst35.Bi
+S15 <= ful_adder_1bit:inst36.Si
+A15 => ful_adder_1bit:inst36.Ai
+B15 => ful_adder_1bit:inst36.Bi
+CA <= ful_adder_1bit:inst36.C
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst40
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst20
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst21
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst22
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst23
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst25
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst26
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst28
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst29
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst30
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst31
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst32
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst33
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst34
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst35
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst9|ful_adder_1bit:inst36
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|judge_fsm:inst
+reset => reg_fstate.A.OUTPUTSELECT
+reset => reg_fstate.B.OUTPUTSELECT
+reset => reg_fstate.C.OUTPUTSELECT
+reset => mi.OUTPUTSELECT
+reset => ctl_reg.OUTPUTSELECT
+clock => fstate~1.DATAIN
+co => Selector0.IN1
+co => Selector1.IN0
+co => reg_fstate.C.DATAA
+mi <= mi.DB_MAX_OUTPUT_PORT_TYPE
+ctl_reg <= ctl_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|register_16bit:inst15
+Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CL => inst17.IN0
+CK => inst.CLK
+CK => inst2.CLK
+CK => inst3.CLK
+CK => inst4.CLK
+CK => inst5.CLK
+CK => inst6.CLK
+CK => inst7.CLK
+CK => inst8.CLK
+CK => inst9.CLK
+CK => inst10.CLK
+CK => inst11.CLK
+CK => inst12.CLK
+CK => inst13.CLK
+CK => inst14.CLK
+CK => inst15.CLK
+CK => inst16.CLK
+D0 => inst.DATAIN
+Q1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst2.DATAIN
+Q2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst3.DATAIN
+Q3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst4.DATAIN
+Q4 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D4 => inst5.DATAIN
+Q5 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+D5 => inst6.DATAIN
+Q6 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+D6 => inst7.DATAIN
+Q7 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+D7 => inst8.DATAIN
+Q8 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D8 => inst9.DATAIN
+Q9 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+D9 => inst10.DATAIN
+Q10 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+D10 => inst11.DATAIN
+Q11 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+D11 => inst12.DATAIN
+Q12 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+D12 => inst13.DATAIN
+Q13 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+D13 => inst14.DATAIN
+Q14 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+D14 => inst15.DATAIN
+Q15 <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+D15 => inst16.DATAIN
+
+
+|final_test|RCA_16_LOW:inst10
+S0 <= ful_adder_1bit:inst40.Si
+A0 => ful_adder_1bit:inst40.Ai
+B0 => ful_adder_1bit:inst40.Bi
+Ci => ful_adder_1bit:inst40.Ci
+S1 <= ful_adder_1bit:inst20.Si
+A1 => ful_adder_1bit:inst20.Ai
+B1 => ful_adder_1bit:inst20.Bi
+S2 <= ful_adder_1bit:inst21.Si
+A2 => ful_adder_1bit:inst21.Ai
+B2 => ful_adder_1bit:inst21.Bi
+S3 <= ful_adder_1bit:inst22.Si
+A3 => ful_adder_1bit:inst22.Ai
+B3 => ful_adder_1bit:inst22.Bi
+S4 <= ful_adder_1bit:inst23.Si
+A4 => ful_adder_1bit:inst23.Ai
+B4 => ful_adder_1bit:inst23.Bi
+S5 <= ful_adder_1bit:inst25.Si
+A5 => ful_adder_1bit:inst25.Ai
+B5 => ful_adder_1bit:inst25.Bi
+S6 <= ful_adder_1bit:inst26.Si
+A6 => ful_adder_1bit:inst26.Ai
+B6 => ful_adder_1bit:inst26.Bi
+S7 <= ful_adder_1bit:inst28.Si
+A7 => ful_adder_1bit:inst28.Ai
+B7 => ful_adder_1bit:inst28.Bi
+S8 <= ful_adder_1bit:inst29.Si
+A8 => ful_adder_1bit:inst29.Ai
+B8 => ful_adder_1bit:inst29.Bi
+S9 <= ful_adder_1bit:inst30.Si
+A9 => ful_adder_1bit:inst30.Ai
+B9 => ful_adder_1bit:inst30.Bi
+S10 <= ful_adder_1bit:inst31.Si
+A10 => ful_adder_1bit:inst31.Ai
+B10 => ful_adder_1bit:inst31.Bi
+S11 <= ful_adder_1bit:inst32.Si
+A11 => ful_adder_1bit:inst32.Ai
+B11 => ful_adder_1bit:inst32.Bi
+S12 <= ful_adder_1bit:inst33.Si
+A12 => ful_adder_1bit:inst33.Ai
+B12 => ful_adder_1bit:inst33.Bi
+S13 <= ful_adder_1bit:inst34.Si
+A13 => ful_adder_1bit:inst34.Ai
+B13 => ful_adder_1bit:inst34.Bi
+S14 <= ful_adder_1bit:inst35.Si
+A14 => ful_adder_1bit:inst35.Ai
+B14 => ful_adder_1bit:inst35.Bi
+S15 <= ful_adder_1bit:inst36.Si
+A15 => ful_adder_1bit:inst36.Ai
+B15 => ful_adder_1bit:inst36.Bi
+CA <= ful_adder_1bit:inst36.C
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst40
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst20
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst21
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst22
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst23
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst25
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst26
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst28
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst29
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst30
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst31
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst32
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst33
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst34
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst35
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|final_test|RCA_16_LOW:inst10|ful_adder_1bit:inst36
+Si <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Ai => inst.IN0
+Ai => inst8.IN0
+Bi => inst.IN1
+Bi => inst8.IN1
+Ci => inst1.IN1
+Ci => inst7.IN1
+C <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,784 @@
+TimeQuest Timing Analyzer report for project2
+Wed Apr 27 23:51:16 2016
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'CLOCK'
+ 12. Hold: 'CLOCK'
+ 13. Recovery: 'CLOCK'
+ 14. Removal: 'CLOCK'
+ 15. Setup Transfers
+ 16. Hold Transfers
+ 17. Recovery Transfers
+ 18. Removal Transfers
+ 19. Report TCCS
+ 20. Report RSKM
+ 21. Unconstrained Paths Summary
+ 22. Clock Status Summary
+ 23. Unconstrained Input Ports
+ 24. Unconstrained Output Ports
+ 25. Unconstrained Input Ports
+ 26. Unconstrained Output Ports
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; project2                                            ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM570F256C3                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; CLOCK      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Fmax Summary                                     ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 131.56 MHz ; 131.56 MHz      ; CLOCK      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Setup Summary                  ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLOCK ; -6.601 ; -70.699       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 1.465 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Recovery Summary               ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLOCK ; -3.973 ; -131.109      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Removal Summary               ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 3.960 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLOCK ; -2.289 ; -2.289        ;
++-------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLOCK'                                                                                                                        ;
++--------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; -6.601 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst16 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 7.393      ;
+; -6.275 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst15 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 7.067      ;
+; -6.119 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst14 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 6.911      ;
+; -6.071 ; judge_fsm:inst|fstate.C ; inst13                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 6.863      ;
+; -5.657 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst13 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 6.449      ;
+; -5.308 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst11 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 6.100      ;
+; -5.199 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst12 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 5.991      ;
+; -4.712 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst10 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 5.504      ;
+; -4.642 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst9  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 5.434      ;
+; -4.296 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst8  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 5.088      ;
+; -3.257 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst7  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.049      ;
+; -3.143 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst6  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.935      ;
+; -2.329 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst5  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.121      ;
+; -2.289 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst3  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.081      ;
+; -1.853 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst4  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.645      ;
+; -1.131 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst2  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.923      ;
+; -1.006 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.798      ;
+; -0.811 ; judge_fsm:inst|fstate.C ; judge_fsm:inst|fstate.C      ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.603      ;
++--------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'CLOCK'                                                                                                                        ;
++-------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.465 ; judge_fsm:inst|fstate.C ; judge_fsm:inst|fstate.C      ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.603      ;
+; 1.660 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.798      ;
+; 1.785 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst2  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.923      ;
+; 2.507 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst4  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.645      ;
+; 2.943 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst3  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.081      ;
+; 2.983 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst5  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.121      ;
+; 3.797 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst6  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.935      ;
+; 3.911 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst7  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.049      ;
+; 4.950 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst8  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 5.088      ;
+; 5.296 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst9  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 5.434      ;
+; 5.366 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst10 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 5.504      ;
+; 5.853 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst12 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 5.991      ;
+; 5.962 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst11 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 6.100      ;
+; 6.311 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst13 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 6.449      ;
+; 6.725 ; judge_fsm:inst|fstate.C ; inst13                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 6.863      ;
+; 6.773 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst14 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 6.911      ;
+; 6.929 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst15 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 7.067      ;
+; 7.255 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst16 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 7.393      ;
++-------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'CLOCK'                                                                                                                     ;
++--------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst2  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst3  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst4  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst5  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst6  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst7  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst8  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst9  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst10 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst11 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst12 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst13 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst14 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst15 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst16 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst   ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst2  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst3  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst4  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst5  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst6  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst7  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst8  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst9  ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst10 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst11 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst12 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst13 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst14 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst15 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst16 ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.973 ; judge_fsm:inst|fstate.C ; inst13                       ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.765      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst   ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst2  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst3  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst4  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst5  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst6  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst7  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst8  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst9  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst10 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst11 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst12 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst13 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst14 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst15 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst14|inst16 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst   ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst2  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst3  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst4  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst5  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst6  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst7  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst8  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst9  ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst10 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst11 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst12 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst13 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst14 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst15 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; register_16bit:inst15|inst16 ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.806 ; CLOCK                   ; inst13                       ; CLOCK        ; CLOCK       ; 0.500        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst   ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst2  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst3  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst4  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst5  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst6  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst7  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst8  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst9  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst10 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst11 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst12 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst13 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst14 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst15 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst14|inst16 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst   ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst2  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst3  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst4  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst5  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst6  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst7  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst8  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst9  ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst10 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst11 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst12 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst13 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst14 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst15 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; register_16bit:inst15|inst16 ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
+; -3.306 ; CLOCK                   ; inst13                       ; CLOCK        ; CLOCK       ; 1.000        ; 2.302      ; 6.400      ;
++--------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'CLOCK'                                                                                                                     ;
++-------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst   ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst2  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst3  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst4  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst5  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst6  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst7  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst8  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst9  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst10 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst11 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst12 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst13 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst14 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst15 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst14|inst16 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst   ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst2  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst3  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst4  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst5  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst6  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst7  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst8  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst9  ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst10 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst11 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst12 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst13 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst14 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst15 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; register_16bit:inst15|inst16 ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 3.960 ; CLOCK                   ; inst13                       ; CLOCK        ; CLOCK       ; 0.000        ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst   ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst2  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst3  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst4  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst5  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst6  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst7  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst8  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst9  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst10 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst11 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst12 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst13 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst14 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst15 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst14|inst16 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst   ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst2  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst3  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst4  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst5  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst6  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst7  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst8  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst9  ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst10 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst11 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst12 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst13 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst14 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst15 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; register_16bit:inst15|inst16 ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.460 ; CLOCK                   ; inst13                       ; CLOCK        ; CLOCK       ; -0.500       ; 2.302      ; 6.400      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst2  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst3  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst4  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst5  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst6  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst7  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst8  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst9  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst10 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst11 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst12 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst13 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst14 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst15 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst14|inst16 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst   ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst2  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst3  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst4  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst5  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst6  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst7  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst8  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst9  ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst10 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst11 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst12 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst13 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst14 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst15 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; register_16bit:inst15|inst16 ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
+; 4.627 ; judge_fsm:inst|fstate.C ; inst13                       ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 4.765      ;
++-------+-------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 18       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 18       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 66       ; 33       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 66       ; 33       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 66    ; 66   ;
+; Unconstrained Input Port Paths  ; 1561  ; 1561 ;
+; Unconstrained Output Ports      ; 39    ; 39   ;
+; Unconstrained Output Port Paths ; 172   ; 172  ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; CLOCK  ; CLOCK ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                                          ;
++------------+-----------------------------------------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                                                               ;
++------------+-----------------------------------------------------------------------------------------------------------------------+
+; A[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[7]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[8]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[9]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[10]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[11]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[12]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[13]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[14]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[15]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[16]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[17]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[18]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[19]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[20]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[21]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[22]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[23]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[24]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[25]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[26]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[27]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[28]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[29]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[30]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[31]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[7]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[8]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[9]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[10]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[11]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[12]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[13]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[14]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[15]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[16]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[17]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[18]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[19]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[20]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[21]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[22]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[23]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[24]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[25]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[26]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[27]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[28]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[29]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[30]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[31]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; CLOCK      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found. This port has clock assignment. ;
+; RST_FSM    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
++------------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; CLR_OUT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; C_LOW       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cout        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q0          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q1          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q2          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q3          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q4          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q5          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q6          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q7          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q8          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q9          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q10         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q11         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q12         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q13         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q14         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q15         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q16         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q17         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q18         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q19         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q20         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q21         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q22         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q23         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q24         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q25         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q26         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q27         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q28         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q29         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q30         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q31         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fsm_input   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reg_clock   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; test_clr    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; test_fsm    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                                                          ;
++------------+-----------------------------------------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                                                               ;
++------------+-----------------------------------------------------------------------------------------------------------------------+
+; A[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[7]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[8]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[9]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[10]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[11]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[12]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[13]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[14]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[15]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[16]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[17]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[18]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[19]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[20]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[21]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[22]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[23]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[24]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[25]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[26]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[27]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[28]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[29]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[30]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; A[31]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[7]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[8]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[9]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[10]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[11]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[12]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[13]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[14]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[15]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[16]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[17]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[18]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[19]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[20]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[21]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[22]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[23]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[24]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[25]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[26]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[27]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[28]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[29]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[30]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; B[31]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
+; CLOCK      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found. This port has clock assignment. ;
+; RST_FSM    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found                                  ;
++------------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; CLR_OUT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; C_LOW       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cout        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q0          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q1          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q2          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q3          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q4          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q5          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q6          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q7          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q8          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q9          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q10         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q11         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q12         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q13         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q14         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q15         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q16         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q17         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q18         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q19         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q20         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q21         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q22         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q23         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q24         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q25         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q26         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q27         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q28         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q29         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q30         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Q31         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; fsm_input   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reg_clock   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; test_clr    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; test_fsm    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Wed Apr 27 23:51:15 2016
+Info: Command: quartus_sta project2 -c project2
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'project2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK CLOCK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -6.601
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.601             -70.699 CLOCK 
+Info (332146): Worst-case hold slack is 1.465
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.465               0.000 CLOCK 
+Info (332146): Worst-case recovery slack is -3.973
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.973            -131.109 CLOCK 
+Info (332146): Worst-case removal slack is 3.960
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.960               0.000 CLOCK 
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 CLOCK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 745 megabytes
+    Info: Processing ended: Wed Apr 27 23:51:16 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

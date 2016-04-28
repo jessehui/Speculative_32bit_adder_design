@@ -1,0 +1,101 @@
+Archive Project report for project2
+Thu Apr 28 10:09:30 2016
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Thu Apr 28 10:09:30 2016 ;
+; Revision Name          ; project2                              ;
+; Top-level Entity Name  ; final_test                            ;
+; Family                 ; MAX II                                ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory D:/UIC/465 Digital Logic Circuit/pro2/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'D:/UIC/465 Digital Logic Circuit/pro2/project2.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'project2.archive.rpt'
+Info (23030): Evaluation of Tcl script d:/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 662 megabytes
+    Info: Processing ended: Thu Apr 28 10:09:30 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++--------------------------------------------------+
+; Files Archived                                   ;
++--------------------------------------------------+
+; File Name                                        ;
++--------------------------------------------------+
+; CLR_st.bdf                                       ;
+; components.bdf                                   ;
+; ctl_reg_clear.smf                                ;
+; ctl_reg_clk.smf                                  ;
+; d:/quartus/quartus/bin64/assignment_defaults.qdf ;
+; ece_465_project2_test_vwf.vwf                    ;
+; final_test.bdf                                   ;
+; ful_adder_1bit.bdf                               ;
+; judge_fsm.smf                                    ;
+; judge_fsm.v                                      ;
+; judge_fsm.vwf                                    ;
+; project2.qpf                                     ;
+; project2.qsf                                     ;
+; RCA_16_LOW.bdf                                   ;
+; RCA_16_test.vwf                                  ;
+; RCA_16_test2.vwf                                 ;
+; register_16bit.bdf                               ;
+; register_16bit.vwf                               ;
+; test.bdf                                         ;
+; test2.bdf                                        ;
+; test_adder.bdf                                   ;
+; test_all.vwf                                     ;
+; test_all_1.vwf                                   ;
+; test_regi_add.vwf                                ;
+; test_register_time.bdf                           ;
+; WTF.vwf                                          ;
++--------------------------------------------------+
+
+
